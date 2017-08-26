@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pet">
+    <resultMap id="bean" type="Data.Beans.PetBean">
+        <result column="level" property="level" jdbcType="INTEGER"/>
+        <result column="exp" property="exp" jdbcType="INTEGER"/>
+        <result column="basic_attr" property="basic_attr" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="select" resultMap="bean">
+        select * from pet
+    </select>
+</mapper>
